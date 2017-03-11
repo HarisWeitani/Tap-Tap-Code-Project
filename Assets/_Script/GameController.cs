@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
     //public GameObject objectToSpawn;
-    
+
     
 	// Use this for initialization
 	void Start () {
@@ -33,18 +33,20 @@ public class GameController : MonoBehaviour {
 
     void OnApplicationQuit()
     {
-        Save();
+
     }
 
     void Save()
     {
-
+        
     }
 
     void Load()
     {
 
     }
+
+
 }
 
 // turbo

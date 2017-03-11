@@ -32,11 +32,9 @@ public class VariableStore : MonoBehaviour
     public int PSU4;
     public int PSU5;
 
-    public int Furniture1;
-    public int Furniture2;
-    public int Furniture3;
-    public int Furniture4;
-    public int Furniture5;
+
+
+
 
 
 }
