@@ -7,12 +7,8 @@ public class VariableStore : MonoBehaviour
 
     public int money;
     public float happiness;
-    
-    public int CPU1;
-    public int CPU2;
-    public int CPU3;
-    public int CPU4;
-    public int CPU5;
+
+    public int[] CPU = new int[] { 10,20,30,40,50 };
 
     public int GPU1;
     public int GPU2;
