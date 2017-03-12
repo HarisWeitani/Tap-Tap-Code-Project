@@ -8,12 +8,14 @@ public class GameController : MonoBehaviour
     //public GameObject objectToSpawn;
 
     //item variable
-    private int money;
+    public int money;
     private float happiness;
     private int[] CPU = new int[] { 10, 20, 30, 40, 50 };
     private int[] GPU = new int[] { 11, 21, 31, 41, 51 };
     private int[] PSU = new int[] { 12, 22, 32, 42, 52 };
     private int[] RAM = new int[] { 13, 23, 33, 43, 53 };
+
+
 
     //menyimpan data index buat saving
     private int indexCPU;
@@ -53,8 +55,8 @@ public class GameController : MonoBehaviour
             //Instantiate(objectToSpawn, spawnPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
             Debug.Log("On Screen Click");
             money += 100;
-            Debug.Log(money);
-
+            Debug.Log("money " +money);
+            Debug.Log("index CPU "+indexCPU);
         }
 
     }
@@ -62,6 +64,7 @@ public class GameController : MonoBehaviour
     void OnApplicationQuit()
     {
         Save();
+        Debug.Log("On Application Quit Save");
     }
 
     void Save()
@@ -87,7 +90,7 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("gpuKey",indexGPU);
         PlayerPrefs.SetInt("psuKey",indexPSU);
         PlayerPrefs.SetInt("ramKey",indexRAM);
-        Debug.Log("Save Data");
+        Debug.Log("Save Data" + indexCPU);
     }
 
     void Load()
@@ -103,6 +106,7 @@ public class GameController : MonoBehaviour
         indexRAM = PlayerPrefs.GetInt("ramKey");
         Debug.Log("Load Data");
     }
+
 
 
 }
