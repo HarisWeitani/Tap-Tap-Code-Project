@@ -15,11 +15,17 @@ public class ButtonManager : MonoBehaviour
     private int[] pricePSU = new int[] { 100, 300, 500, 700, 900 };
     private int[] priceRAM = new int[] { 100, 300, 500, 700, 900 };
 
+    //software price
+    private int[] softwarePrice = new int[] { 200, 400, 600, 800, 1000 };
+    //ada req buat beli software
+
     //nanti di taro di button masing masing item
     public int indexCPU;
     public int indexGPU;
     public int indexPSU;
     public int indexRAM;
+
+    public int indexSoftware;
 
     private int flag = 0;
 
@@ -31,7 +37,7 @@ public class ButtonManager : MonoBehaviour
         GameObject buying = GameObject.Find("GameController");
         GameController buy = buying.GetComponent<GameController>();
 
-        Debug.Log("Money Now : Price Now = " + buy.money + priceCPU[index]);
+        Debug.Log("Money Now : Price Now = " + buy.money +" " +priceCPU[index]);
         if( buy.money >= priceCPU[index])
         {
             buy.money -= priceCPU[index];
@@ -41,7 +47,7 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not Enough Money");
+            Debug.Log("Not Enough Money "+indexCPU);
         }
         
 
@@ -101,6 +107,11 @@ public class ButtonManager : MonoBehaviour
             Debug.Log("Not Enough Money");
         }
     }
+    public void softwareIndex (int index)
+    {
+
+    }
+
 
     /*void Buy(int index)
     {
@@ -117,7 +128,7 @@ public class ButtonManager : MonoBehaviour
 
     }*/
 
-
+    //buat tombol hw dan sw
     public void hardwareBtn(string level)
     {
         SceneManager.LoadScene(level);
